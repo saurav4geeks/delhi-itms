@@ -7,7 +7,6 @@
 
 body {
 }
-
 /* Header */
 header {
   padding: 20px 0 0 10px;
@@ -34,6 +33,21 @@ main {
   background-color: #f7eceb;
 }
 .bg-img {
+  display: flex;
+  justify-content: end;
+}
+.bg-img img {
+  height: 80vh;
+  width: auto;
+}
+@media only screen and (max-width: 600px) {
+  .bg-img {
+    margin-top: 25vh;
+    justify-content: center;
+  }
+  .bg-img img {
+    height: 100%;
+  }
 }
 .login-wrap {
   text-align: center;
