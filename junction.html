@@ -19,6 +19,42 @@
     />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/junc.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      var junctionData = [];
+      $(document).ready(function(){
+        $.ajax({
+          url: "http://65.0.170.23/delhi_items/DelhiItmsWebservice/getJunctionCode",
+          type: 'POST',
+          dataType: 'json', // added data type
+          success: function(res) {
+              console.log(res);
+              var selectJuncDDHtml = '';
+              junctionData = res.data;
+              res.data.forEach(function(item) {
+                selectJuncDDHtml += `<option value=${item.junctn_code}>${item.junctn_code}</option>`;
+              })
+              $(".select-junction-dd").append(selectJuncDDHtml);
+             // alert(res);
+          }
+        }); 
+
+        $('.select-junction-dd').on('change', function() {
+            var selectedJunctionId = this.value;
+            var isSelectedJuncFound = junctionData.find(item => item.junctn_code == this.value);
+            if(isSelectedJuncFound) {
+              console.log("isSleceted",isSelectedJuncFound);
+              // $("#junction-code").val(isSelectedJuncFound.junctn_code);
+              $("#junction-name").val(isSelectedJuncFound.junctn_name);
+              $("#junction-range").val(isSelectedJuncFound.tbl_range);
+              $("#junction-zone").val(isSelectedJuncFound.zone);
+              $("#junction-district").val(isSelectedJuncFound.district);
+              $("#junction-circle").val(isSelectedJuncFound.circle_name);
+            }
+          //  alert( this.value );
+        });
+      });
+    </script>
   </head>
   <body>
     <!-- Main body -->
@@ -67,7 +103,7 @@
                     <label
                       for="junction-ID"
                       class="col-form-label col-form-label-sm"
-                      >Junction ID</label
+                      >Junction Code</label
                     >
                   </div>
                   <div class="col-md-4">
@@ -79,19 +115,17 @@
                       aria-label="junction-ID"
                     /> -->
                     <select
-                      class="form-select form-select-sm"
+                      class="form-select form-select-sm select-junction-dd"
                       aria-label=".form-select-sm example"
                     >
                       <option selected>Select</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                    
                     </select>
                   </div>
                 </div>
               </div>
               <!-- Form group -->
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <div class="row w-75 justify-content-between">
                   <div class="col-md-4">
                     <label
@@ -110,7 +144,7 @@
                     />
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- Form group -->
               <div class="form-group">
                 <div class="row w-75 justify-content-between">
