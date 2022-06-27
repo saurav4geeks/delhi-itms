@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delhi ITMS</title>
+    <!-- Bootstrap  5.2 stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/junc.css" />
+  </head>
+  <body>
+    <!-- Main body -->
+    <div class="header-body">
+      <!-- Side Navbar section -->
+      <div class="side-nav">
+        <div class="user">
+          <i class="fa-solid fa-circle-user fa-2xl"></i>
+          <h4>USERNAME</h4>
+        </div>
+        <ul class="sidenav-links">
+          <li>
+            <a href="./home.html"
+              ><i class="fa-regular fa-pen-to-square"></i>
+              <p>Add/Edit</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-chart-column"></i>
+              <p>Report</p></a
+            >
+          </li>
+          <div class="active"></div>
+        </ul>
+      </div>
+      <!-- Main content section -->
+      <div class="content-body">
+        <!-- content header section -->
+        <header>
+          <div class="header-content">
+            <img src="./assets/logo.png" alt="" />
+            <h2>Delhi ITMS Site Survey App</h2>
+          </div>
+        </header>
+        <!-- Content body -->
+        <main>
+          <div class="container pb-1">
+            <h2 class="junc-head">Junction Data</h2>
+            <!-- Form starts -->
+            <form action="">
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-ID"
+                      class="col-form-label col-form-label-sm"
+                      >Junction ID</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <!-- <input
+                      type="text"
+                      id="junction-ID"
+                      class="form-control form-control-sm"
+                      placeholder="Select"
+                      aria-label="junction-ID"
+                    /> -->
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-code"
+                      class="col-form-label col-form-label-sm"
+                      >Junction Code</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-code"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-code"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-name"
+                      class="col-form-label col-form-label-sm"
+                      >Junction Name</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-name"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- sub heading -->
+              <h2 class="form-sub-heading">TRAFFIC POLE JURISDICTION</h2>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-zone"
+                      class="col-form-label col-form-label-sm"
+                      >Zone</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-zone"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-zone"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-range"
+                      class="col-form-label col-form-label-sm"
+                      >Range</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-range"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-range"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-district"
+                      class="col-form-label col-form-label-sm"
+                      >District</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-district"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-district"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-circle"
+                      class="col-form-label col-form-label-sm"
+                      >Circle</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-circle"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-circle"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- sub heading -->
+              <h2 class="form-sub-heading">
+                TRAFFIC INSPECTOR CONTACT DETAILS
+              </h2>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-ti-name"
+                      class="col-form-label col-form-label-sm"
+                      >TI Name</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-ti-name"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-ti-name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-ti-designation"
+                      class="col-form-label col-form-label-sm"
+                      >TI Designation</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-ti-designation"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-ti-designation"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-ti-mobile"
+                      class="col-form-label col-form-label-sm"
+                      >TI Mobile</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-ti-mobile"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-ti-mobile"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-ti-email"
+                      class="col-form-label col-form-label-sm"
+                      >TI Email</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-ti-email"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-ti-email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-asi-name"
+                      class="col-form-label col-form-label-sm"
+                      >ASI Name</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-asi-name"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-asi-name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-asi-mobile"
+                      class="col-form-label col-form-label-sm"
+                      >ASI Mobile</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      id="junction-asi-mobile"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-asi-mobile"
+                    />
+                  </div>
+                </div>
+              </div>
+              <h2 class="form-sub-heading">ADDITIONAL DETAILS</h2>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-priority"
+                      class="col-form-label col-form-label-sm"
+                      >Priority (as per Traffic Dept)</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <!-- <input
+                      type="text"
+                      id="junction-priority"
+                      class="form-control form-control-sm"
+                      placeholder="Select"
+                      aria-label="junction-priority"
+                    /> -->
+                    <select
+                      class="form-select form-select-sm"
+                      id="junction-priority"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-road-authority"
+                      class="col-form-label col-form-label-sm"
+                      >Road Authority</label
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <!-- <input
+                      type="text"
+                      id="junction-road-authority"
+                      class="form-control form-control-sm"
+                      placeholder="Select"
+                      aria-label="junction-road-authority"
+                    /> -->
+                    <select
+                      class="form-select form-select-sm"
+                      id="junction-road-authority"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- sub heading -->
+              <h2 class="form-sub-heading mb-4">REMARKS</h2>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-recom-td"
+                      class="col-form-label col-form-label-sm"
+                      >Recommendations (Traffic Dept)</label
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <textarea
+                      class="form-control"
+                      id="junction-recom-td"
+                      rows="2"
+                      placeholder="Enter Text"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-75 justify-content-between">
+                  <div class="col-md-4">
+                    <label
+                      for="junction-recom-ct"
+                      class="col-form-label col-form-label-sm"
+                      >Recommendations (Consultant)</label
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <textarea
+                      class="form-control"
+                      id="junction-recom-ct"
+                      rows="2"
+                      placeholder="Enter Text"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="form-button">
+                <button type="submit" class="btn-next">SAVE</button>
+              </div>
+            </form>
+            <!-- Form ends -->
+          </div>
+          <div class="bg"><img src="./assets/bg.png" alt="" /></div>
+        </main>
+      </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

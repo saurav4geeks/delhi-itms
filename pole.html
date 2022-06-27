@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delhi ITMS</title>
+    <!-- Bootstrap  5.2 stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/junc.css" />
+  </head>
+  <body>
+    <!-- Main body -->
+    <div class="header-body">
+      <!-- Side Navbar section -->
+      <div class="side-nav">
+        <div class="user">
+          <i class="fa-solid fa-circle-user fa-2xl"></i>
+          <h4>USERNAME</h4>
+        </div>
+        <ul class="sidenav-links">
+          <li>
+            <a href="./home.html"
+              ><i class="fa-regular fa-pen-to-square"></i>
+              <p>Add/Edit</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-chart-column"></i>
+              <p>Report</p></a
+            >
+          </li>
+          <div class="active"></div>
+        </ul>
+      </div>
+      <!-- Main content section -->
+      <div class="content-body">
+        <!-- content header section -->
+        <header>
+          <div class="header-content">
+            <img src="./assets/logo.png" alt="" />
+            <h2>Delhi ITMS Site Survey App</h2>
+          </div>
+        </header>
+        <!-- Content body -->
+        <main>
+          <div class="container pb-1">
+            <h2 class="junc-head">POLE DATA</h2>
+            <!-- Form starts -->
+            <form action="">
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-50">
+                  <div class="col-md-6">
+                    <label
+                      for="junction-ID"
+                      class="col-form-label col-form-label-sm"
+                      >Junction ID</label
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <!-- <input
+                      type="text"
+                      id="junction-ID"
+                      class="form-control form-control-sm"
+                      placeholder="Select"
+                      aria-label="junction-ID"
+                    /> -->
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="junction-ID"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-50">
+                  <div class="col-md-6">
+                    <label
+                      for="junction-name"
+                      class="col-form-label col-form-label-sm"
+                      >Junction Name</label
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      id="junction-name"
+                      class="form-control form-control-sm"
+                      placeholder="Auto Fill"
+                      aria-label="junction-name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-50">
+                  <div class="col-md-6">
+                    <label
+                      for="junction-arm-no"
+                      class="col-form-label col-form-label-sm"
+                      >Arm No</label
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <!-- <input
+                      type="text"
+                      id="junction-arm-no"
+                      class="form-control form-control-sm"
+                      placeholder="Select"
+                      aria-label="junction-arm-no"
+                    /> -->
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="junction-ID"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row w-50">
+                  <div class="col-md-6">
+                    <label
+                      for="pole-no"
+                      class="col-form-label col-form-label-sm"
+                      >Pole No</label
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <!-- <input
+                      type="text"
+                      id="junction-arm-name"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-arm-name"
+                    /> -->
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-no"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- sub heading -->
+              <h2 class="form-sub-heading">POLE DATA</h2>
+              <div class="row">
+                <div class="col-md-1">
+                  <h4 class="table-heading">Arm No</h4>
+                </div>
+                <div class="col-md-1">
+                  <h4 class="table-heading">Pole No</h4>
+                </div>
+                <div class="col-md-3">
+                  <h4 class="table-heading">Parameter</h4>
+                </div>
+                <div class="col-md-3">
+                  <h4 class="table-heading">Details</h4>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-type"
+                      class="col-form-label col-form-label-sm"
+                      >Type of Pole</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-type"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Traffic Signal</option>
+                      <option value="2">Pedestrian</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-median"
+                      class="col-form-label col-form-label-sm"
+                      >Median of Pole</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <!-- <input
+                      type="text"
+                      id="junction-no-of-lanes"
+                      class="form-control form-control-sm"
+                      placeholder="Select"
+                      aria-label="junction-no-of-lanes"
+                    /> -->
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-median"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Available</option>
+                      <option value="2">Not Available</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-placement"
+                      class="col-form-label col-form-label-sm"
+                      >Pole Placement</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-placement"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">On Median</option>
+                      <option value="2">Off Median</option>
+                      <option value="3">On Sidewalk</option>
+                      <option value="4">On Roundabout</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-distance-controller"
+                      class="col-form-label col-form-label-sm"
+                      >Approx distance from Controller <br />(in MTR)</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <input
+                      type="text"
+                      id="pole-distance-controller"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-standard-height"
+                      class="col-form-label col-form-label-sm"
+                      >Standard Pole Height</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-standard-height"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">3</option>
+                      <option value="2">4</option>
+                      <option value="3">5</option>
+                      <option value="4">6</option>
+                      <option value="5">7</option>
+                      <option value="6">9</option>
+                      <option value="7">9.5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-cantilever-height"
+                      class="col-form-label col-form-label-sm"
+                      >Cantilever Pole Height</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-cantilever-height"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">3</option>
+                      <option value="2">4</option>
+                      <option value="3">5</option>
+                      <option value="4">6</option>
+                      <option value="5">7</option>
+                      <option value="6">9</option>
+                      <option value="7">9.5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-cantilever-arm-length"
+                      class="col-form-label col-form-label-sm"
+                      >Cantilever Pole Arm Length</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-cantilever-arm-length"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">9</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Table header -->
+              <div class="row">
+                <div class="col-md-1">
+                  <h4 class="table-heading">Arm No</h4>
+                </div>
+                <div class="col-md-1">
+                  <h4 class="table-heading">Pole No</h4>
+                </div>
+                <div class="col-md-3">
+                  <h4 class="table-heading">Parameter</h4>
+                </div>
+                <div class="col-md-3">
+                  <h4 class="table-heading">Details</h4>
+                </div>
+                <div class="col-md-3">
+                  <h4 class="table-heading">Condition</h4>
+                </div>
+                <div class="col-md-1">
+                  <h4 class="table-heading">Timer<br />(in sec)</h4>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-red"
+                      class="col-form-label col-form-label-sm"
+                      >Red</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-red"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-red-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-red-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-amber"
+                      class="col-form-label col-form-label-sm"
+                      >Amber</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-amber"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-amber-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-amber-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-green"
+                      class="col-form-label col-form-label-sm"
+                      >Green</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-green"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-green-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-green-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-stop"
+                      class="col-form-label col-form-label-sm"
+                      >Pedestrian Stop <br />(Facing Zebra)</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-stop"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-stop-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-stop-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-walk"
+                      class="col-form-label col-form-label-sm"
+                      >Pedestrian Walk <br />(Facing Zebra)</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-walk"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-walk-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-walk-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-left-turn"
+                      class="col-form-label col-form-label-sm"
+                      >Left Turn</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-left-turn"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-left-turn-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-left-turn-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-right-turn"
+                      class="col-form-label col-form-label-sm"
+                      >Right Turn</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-right-turn"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-right-turn-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-right-turn-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-U-turn"
+                      class="col-form-label col-form-label-sm"
+                      >U Turn</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-U-turn"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-U-turn-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-U-turn-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-timer"
+                      class="col-form-label col-form-label-sm"
+                      >Timer</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-timer"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-timer-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-timer-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Aspects Opposite Traffic -->
+              <!-- Table header -->
+              <div class="row">
+                <div class="col-md-1">
+                  <h4 class="table-heading">Arm No</h4>
+                </div>
+                <div class="col-md-1">
+                  <h4 class="table-heading">Pole No</h4>
+                </div>
+                <div class="col-md-3">
+                  <h4 class="table-heading">Parameter</h4>
+                </div>
+                <div class="col-md-3">
+                  <h4 class="table-heading">Details</h4>
+                </div>
+                <div class="col-md-3">
+                  <h4 class="table-heading">Condition</h4>
+                </div>
+                <div class="col-md-1">
+                  <h4 class="table-heading">Timer<br />(in sec)</h4>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-red"
+                      class="col-form-label col-form-label-sm"
+                      >Red</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-red"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-red-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-red-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-amber"
+                      class="col-form-label col-form-label-sm"
+                      >Amber</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-amber"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-amber-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-amber-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-green"
+                      class="col-form-label col-form-label-sm"
+                      >Green</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-green"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-green-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-green-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-stop"
+                      class="col-form-label col-form-label-sm"
+                      >Pedestrian Stop <br />(Facing Zebra)</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-stop"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-stop-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-stop-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-walk"
+                      class="col-form-label col-form-label-sm"
+                      >Pedestrian Walk <br />(Facing Zebra)</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-walk"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-walk-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-walk-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-left-turn"
+                      class="col-form-label col-form-label-sm"
+                      >Left Turn</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-left-turn"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-left-turn-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-left-turn-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-right-turn"
+                      class="col-form-label col-form-label-sm"
+                      >Right Turn</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-right-turn"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-right-turn-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-right-turn-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-U-turn"
+                      class="col-form-label col-form-label-sm"
+                      >U Turn</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-U-turn"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-U-turn-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-U-turn-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>1</p>
+                  </div>
+                  <div class="col-md-3">
+                    <label
+                      for="pole-timer"
+                      class="col-form-label col-form-label-sm"
+                      >Timer</label
+                    >
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-timer"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label=".form-select-sm example"
+                      id="pole-timer-condition"
+                    >
+                      <option selected>Select</option>
+                      <option value="1">Working</option>
+                      <option value="2">Not Working</option>
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <input
+                      type="text"
+                      id="pole-timer-timer"
+                      class="form-control form-control-sm"
+                      placeholder="Enter"
+                      aria-label="junction-no-of-lanes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                  <div class="form-button-add">
+                    <button type="submit" class="btn-arm">+ ADD ARM</button>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="form-button-add">
+                    <button type="submit" class="btn-pole">+ ADD POLE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-button">
+                <button type="submit" class="btn-next">SAVE</button>
+              </div>
+            </form>
+            <!-- Form ends -->
+          </div>
+          <div class="bg"><img src="./assets/bg.png" alt="" /></div>
+        </main>
+      </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
