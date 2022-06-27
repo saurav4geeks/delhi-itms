@@ -143,9 +143,9 @@
                   </div>
                   <div class="col-md-4">
                     <select
+                      id="arm-no"
                       class="form-select form-select-sm"
                       aria-label=".form-select-sm example"
-                      id="arm-no"
                     >
                       <option disabled selected>Select</option>
                       <option value="1">1</option>
@@ -860,12 +860,18 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // Selecting arm no
-      // let selection = document.getElementById("arm-no");
-      // let armNo = document.getElementsByClassName("armNo");
-      // selection.addEventListener("change", () => {
-      //   armNo.innerText = selection.options[selection.selectedIndex].text;
-      // });
+      const armSelectBox = document.querySelector("#arm-no");
+
+      function setArmNum(val) {
+        const armNoTextList = document.querySelectorAll(".armNo");
+        armNoTextList.forEach((armCell) => {
+          armCell.innerText = val;
+        });
+      }
+
+      armSelectBox.addEventListener("change", (e) => {
+        setArmNum(e.target.value);
+      });
     </script>
   </body>
 </html>

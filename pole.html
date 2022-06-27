@@ -116,24 +116,15 @@
               <div class="form-group">
                 <div class="row w-50">
                   <div class="col-md-6">
-                    <label
-                      for="junction-arm-no"
-                      class="col-form-label col-form-label-sm"
+                    <label for="arm-no" class="col-form-label col-form-label-sm"
                       >Arm No</label
                     >
                   </div>
                   <div class="col-md-6">
-                    <!-- <input
-                      type="text"
-                      id="junction-arm-no"
-                      class="form-control form-control-sm"
-                      placeholder="Select"
-                      aria-label="junction-arm-no"
-                    /> -->
                     <select
                       class="form-select form-select-sm"
                       aria-label=".form-select-sm example"
-                      id="junction-ID"
+                      id="arm-no"
                     >
                       <option disabled selected>Select</option>
                       <option value="1">1</option>
@@ -1463,17 +1454,32 @@
     ></script>
     <script>
       // Selecting arm no
-      let selection = document.getElementById("arm-no");
-      let armNo = document.getElementsByClassName("armNo");
-      selection.addEventListener("change", () => {
-        armNo.innerText = selection.option[selection.selectedIndex].text;
+      const armSelectBox = document.querySelector("#arm-no");
+
+      function setArmNum(val) {
+        const armNoTextList = document.querySelectorAll(".armNo");
+        armNoTextList.forEach((armCell) => {
+          armCell.innerText = val;
+        });
+      }
+
+      armSelectBox.addEventListener("change", (e) => {
+        setArmNum(e.target.value);
       });
-      // Selecting arm no
-      // let select2 = document.getElementById("pole-no");
-      // let poleNo = document.getElementsByClassName("poleNo");
-      // selection.addEventListener("change", () => {
-      //   poleNo.innerText = selection.option[selection.selectedIndex].text;
-      // });
+
+      // Selecting pole no
+      const poleSelectBox = document.querySelector("#pole-no");
+
+      function setPoleNum(val) {
+        const poleNoTextList = document.querySelectorAll(".poleNo");
+        poleNoTextList.forEach((poleCell) => {
+          poleCell.innerText = val;
+        });
+      }
+
+      poleSelectBox.addEventListener("change", (e) => {
+        setPoleNum(e.target.value);
+      });
     </script>
   </body>
 </html>
