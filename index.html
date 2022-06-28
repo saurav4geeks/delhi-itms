@@ -35,7 +35,7 @@
                     class="form-control w-75"
                     id="username"
                     aria-describedby="emailHelp"
-                    placeholder="User Email"
+                    placeholder="User Name"
                   />
                 </div>
                 <div class="mb-4">
@@ -46,7 +46,7 @@
                     placeholder="Password"
                   />
                 </div>
-                <button type="submit" class="btn-custom w-75">Submit</button>
+                <button id="submitLoginForm" type="button" class="btn-custom w-75">Submit</button>
               </form>
             </div>
           </div>
@@ -64,5 +64,37 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+    $("#submitLoginForm").click(function(e){
+
+        // e.preventDefault();
+        // let formData = $('#junctionForm').serialize();
+        let obj = {}
+          obj["user_name"]= $("#username").val();
+          obj["user_password"]= $("#password").val();
+          
+
+      $.ajax({
+          url: "http://65.0.170.23/delhi_items/DelhiItmsWebservice/user_login_web",
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify(obj),
+          // dataType: 'json', // added data type
+          // data: obj,
+          success: function (response) {
+              let res = JSON.parse(response);
+              console.log("success response",res);
+          },
+          error: function (response) {
+              let res = JSON.parse(response);
+              console.log("Eror response",res);
+          },
+        }); 
+
+    });
+
+    </script>
   </body>
 </html>

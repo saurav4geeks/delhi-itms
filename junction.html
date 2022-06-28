@@ -19,42 +19,7 @@
     />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/junc.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-      var junctionData = [];
-      $(document).ready(function(){
-        $.ajax({
-          url: "http://65.0.170.23/delhi_items/DelhiItmsWebservice/getJunctionCode",
-          type: 'POST',
-          dataType: 'json', // added data type
-          success: function(res) {
-              console.log(res);
-              var selectJuncDDHtml = '';
-              junctionData = res.data;
-              res.data.forEach(function(item) {
-                selectJuncDDHtml += `<option value=${item.junctn_code}>${item.junctn_code}</option>`;
-              })
-              $(".select-junction-dd").append(selectJuncDDHtml);
-             // alert(res);
-          }
-        }); 
-
-        $('.select-junction-dd').on('change', function() {
-            var selectedJunctionId = this.value;
-            var isSelectedJuncFound = junctionData.find(item => item.junctn_code == this.value);
-            if(isSelectedJuncFound) {
-              console.log("isSleceted",isSelectedJuncFound);
-              // $("#junction-code").val(isSelectedJuncFound.junctn_code);
-              $("#junction-name").val(isSelectedJuncFound.junctn_name);
-              $("#junction-range").val(isSelectedJuncFound.tbl_range);
-              $("#junction-zone").val(isSelectedJuncFound.zone);
-              $("#junction-district").val(isSelectedJuncFound.district);
-              $("#junction-circle").val(isSelectedJuncFound.circle_name);
-            }
-          //  alert( this.value );
-        });
-      });
-    </script>
+   
   </head>
   <body>
     <!-- Main body -->
@@ -95,7 +60,7 @@
           <div class="container pb-1">
             <h2 class="junc-head">Junction Data</h2>
             <!-- Form starts -->
-            <form action="">
+            <form id="junctionForm" action="">
               <!-- Form group -->
               <div class="form-group">
                 <div class="row w-75 justify-content-between">
@@ -118,13 +83,8 @@
                       class="form-select form-select-sm select-junction-dd"
                       aria-label=".form-select-sm example"
                     >
-
-
-                      <option disabled selected>Select</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-
+                      <option selected>Select</option>
+                    
                     </select>
                   </div>
                 </div>
@@ -412,10 +372,9 @@
                       aria-label="Default select example"
                     >
                       <option selected>Select</option>
-                      <option value="1">Critical</option>
-                      <option value="2">High</option>
-                      <option value="3">Medium</option>
-                      <option value="4">Low</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
                     </select>
                   </div>
                 </div>
@@ -431,20 +390,22 @@
                     >
                   </div>
                   <div class="col-md-4">
+                    <!-- <input
+                      type="text"
+                      id="junction-road-authority"
+                      class="form-control form-control-sm"
+                      placeholder="Select"
+                      aria-label="junction-road-authority"
+                    /> -->
                     <select
                       class="form-select form-select-sm"
                       id="junction-road-authority"
                       aria-label="Default select example"
                     >
                       <option selected>Select</option>
-                      <option value="1">CPWD</option>
-                      <option value="2">PWD</option>
-                      <option value="3">NDMC</option>
-                      <option value="4">DDA</option>
-                      <option value="5">NH</option>
-                      <option value="6">EDMC</option>
-                      <option value="7">SDMC</option>
-                      <option value="8">MCD</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
                     </select>
                   </div>
                 </div>
@@ -493,7 +454,7 @@
                 </div>
               </div>
               <div class="form-button">
-                <button type="submit" class="btn-next">SAVE</button>
+                <button id="submitJunctnForm" type="button" class="btn-next">SAVE</button>
               </div>
             </form>
             <!-- Form ends -->
@@ -508,5 +469,97 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      var junctionData = [];
+      var selectedJunctionMapId;
+      var selectedCircleId; 
+      var junctionId;
+      var junctionName;
+      $(document).ready(function(){
+        $.ajax({
+          url: "http://65.0.170.23/delhi_items/DelhiItmsWebservice/getJunctionCode",
+          type: 'POST',
+          dataType: 'json', // added data type
+          success: function(res) {
+              console.log(res);
+              var selectJuncDDHtml = '';
+              junctionData = res.data;
+              res.data.forEach(function(item) {
+                selectJuncDDHtml += `<option value=${item.junctn_code}>${item.junctn_code}</option>`;
+              })
+              $(".select-junction-dd").append(selectJuncDDHtml);
+             // alert(res);
+          }
+        }); 
+
+        $('.select-junction-dd').on('change', function() {
+            var selectedJunctionId = this.value;
+            var isSelectedJuncFound = junctionData.find(item => item.junctn_code == this.value);
+            if(isSelectedJuncFound) {
+              console.log("isSleceted",isSelectedJuncFound);
+              // $("#junction-code").val(isSelectedJuncFound.junctn_code);
+              $("#junction-name").val(isSelectedJuncFound.junctn_name);
+              $("#junction-range").val(isSelectedJuncFound.tbl_range);
+              $("#junction-zone").val(isSelectedJuncFound.zone);
+              $("#junction-district").val(isSelectedJuncFound.district);
+              $("#junction-circle").val(isSelectedJuncFound.circle_name);
+               selectedJunctionMapId = isSelectedJuncFound.circle_junctn_map_id;
+               console.log( selectedJunctionMapId,"selectedJunctionMapId");
+               selectedCircleId = isSelectedJuncFound.circle_id;
+               junctionId = isSelectedJuncFound.junctn_code;
+               junctionName = isSelectedJuncFound.junctn_name;
+
+            }
+          //  alert( this.value );
+        });
+      });
+
+    $("#submitJunctnForm").click(function(e){
+
+        // e.preventDefault();
+        // let formData = $('#junctionForm').serialize();
+        let obj = {}
+          obj["circle_junctn_map_id"] = selectedJunctionMapId;
+          obj["junctn_code"] = junctionId;
+          obj["junctn_name"]= junctionName;
+          obj["zone"]= $("#junction-zone").val();
+          obj["tbl_range"]= $("#junction-range").val();
+          obj["district"]= $("#junction-district").val();
+          obj["circle_name"]= $("#junction-circle").val();
+          obj["circle_id"]= selectedCircleId;
+          obj["TI_name"]= $("#junction-ti-name").val();
+          obj["TI_designation"]= $("#junction-ti-designation").val();
+          obj["TI_Mobile_No"]= $("#junction-ti-mobile").val();
+          obj["TI_Email"]= $("#junction-ti-email").val();
+          obj["ASI_Name"]= $("#junction-asi-name").val();
+          obj["ASI_Mobile_No"]= $("#junction-asi-mobile").val();
+          obj["Priority"]= $("#junction-priority").val();
+          obj["Road_Authority"]= $("#junction-road-authority").val();
+          obj["Traffic_Recommendation"]= $("#junction-recom-td").val();
+          obj["Consultant_Recommendation"]= $("#junction-recom-ct").val();
+          obj["user_id"]="";
+
+      $.ajax({
+          url: "http://65.0.170.23/delhi_items/DelhiItmsWebservice/saveWebJunctionData",
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify(obj),
+          // dataType: 'json', // added data type
+          // data: obj,
+          success: function (response) {
+              let res = JSON.parse(response);
+              console.log("success response",res);
+          },
+          error: function (response) {
+              let res = JSON.parse(response);
+              console.log("Eror response",res);
+          },
+        }); 
+
+    });
+
+    </script>
   </body>
 </html>

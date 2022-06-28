@@ -4,9 +4,7 @@
   box-sizing: border-box;
   font-size: 16px;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 body {
 }
 /* ----------------SideNav------------------ */
@@ -239,10 +237,9 @@ form {
 .form-button-add {
   margin: 10px 0px;
 }
-#btn-pole {
-  text-decoration: none;
+.btn-pole {
   width: 120px;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border: none;
   border-radius: 20px;
   background-color: #df6767;
@@ -253,14 +250,13 @@ form {
   transition: all 0.3s;
   transform: scale(1);
 }
-#btn-pole:hover {
+.btn-pole:hover {
   background-color: #e25a5a;
   transform: scale(1.02);
 }
-#btn-arm {
-  text-decoration: none;
+.btn-arm {
   width: 120px;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border: none;
   border-radius: 20px;
   background-color: #af7d7d;
@@ -271,7 +267,7 @@ form {
   transition: all 0.3s;
   transform: scale(1);
 }
-#btn-arm:hover {
+.btn-arm:hover {
   background-color: #b36d6d;
   transform: scale(1.02);
 }
