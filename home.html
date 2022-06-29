@@ -25,9 +25,9 @@
     <div class="header-body">
       <!-- Side Navbar section -->
       <div class="side-nav">
-        <div class="user">
+        <div class="user" >
           <i class="fa-solid fa-circle-user fa-2xl"></i>
-          <h4>USERNAME</h4>
+          <h4 id="userName">USERNAME</h4>
         </div>
         <ul class="sidenav-links">
           <li>
@@ -40,6 +40,12 @@
             <a href="#"
               ><i class="fa-solid fa-chart-column"></i>
               <p>Report</p></a
+            >
+          </li>
+          <li>
+            <a href="./index.html"
+              ><i class="fa fa-sign-out"></i>
+              <p>Logout</p></a
             >
           </li>
           <div class="active"></div>
@@ -91,5 +97,20 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+     $(document).ready(function(){
+        let currentUser = JSON.parse(localStorage.getItem('user'));
+        
+        // console.log(this.currentUser);
+        let userName = currentUser.username;
+
+        $("#userName").html(userName);
+      });
+
+    </script>
+
   </body>
 </html>

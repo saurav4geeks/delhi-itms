@@ -28,14 +28,15 @@
           <div class="col-lg-3" style="margin-block: 10% 0">
             <div class="login-wrap">
               <h1 class="mb-4">Login</h1>
-              <form>
+              <form id="formdetails">
                 <div class="mb-3">
                   <input
                     type="text"
                     class="form-control w-75"
                     id="username"
+                    name="email"
                     aria-describedby="emailHelp"
-                    placeholder="User Name"
+                    placeholder="User Email"
                   />
                 </div>
                 <div class="mb-4">
@@ -43,10 +44,12 @@
                     type="password"
                     class="form-control w-75"
                     id="password"
+                    name="pwd"
                     placeholder="Password"
                   />
                 </div>
-                <button id="submitLoginForm" type="button" class="btn-custom w-75">Submit</button>
+                <div id="successMessage"></div>
+                <button  id="submitLoginForm" type="button" class="btn-custom w-75">Submit</button>
               </form>
             </div>
           </div>
@@ -59,13 +62,36 @@
       </div>
     </main>
     <!-- JavaScript Bundle with Popper -->
+    <style>
+      #successMessage{
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+    }
+
+    </style>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+
     <script>
+
+    $(document).ready(function() {
+    $("#formdetails").validate({
+    rules: {
+    pwd: "required",
+    email: {
+    required: true,
+    email: true
+    }
+    }
+   });
+    });
+
 
     $("#submitLoginForm").click(function(e){
 
@@ -84,17 +110,33 @@
           // dataType: 'json', // added data type
           // data: obj,
           success: function (response) {
-              let res = JSON.parse(response);
-              console.log("success response",res);
+              // let res = JSON.parse(response);
+
+              if(response.isTrue == true) {
+
+                  $("#successMessage").text("Login Successfully"); 
+                  setTimeout(function(){
+                    window.location.href = './home.html'
+                  }, 2000);
+
+              }else {
+                  $("#successMessage").text("Login Failed"); 
+              }
+
+             console.log("success response",response);
+             localStorage.setItem("user", JSON.stringify(response.data.user));
+              
+            //  window.location.href = window.location.origin + '/delhi_itms_web/home.html';
+            // window.location.href = './home.html';
           },
           error: function (response) {
-              let res = JSON.parse(response);
-              console.log("Eror response",res);
+              // let res = JSON.parse(response);
+              // console.log("Eror response",res);
           },
         }); 
 
     });
-
+  
     </script>
   </body>
 </html>

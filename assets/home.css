@@ -93,7 +93,16 @@ body {
   top: 5%;
 }
 .sidenav-links li:nth-child(2):hover ~ .active {
-  top: 55%;
+  top: 37%;
+}
+.sidenav-links li:nth-child(3):hover ~ .active {
+  top: 70%;
+}
+
+#successMessage{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
 }
 
 @media only screen and (max-width: 600px) {

@@ -4,7 +4,9 @@
   box-sizing: border-box;
   font-size: 16px;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
 }
 /* ----------------SideNav------------------ */
@@ -89,11 +91,11 @@ body {
 .sidenav-links li:hover ~ .active {
   display: block;
 }
-.sidenav-links li:nth-child(1):hover ~ .active {
-  top: 5%;
-}
 .sidenav-links li:nth-child(2):hover ~ .active {
-  top: 55%;
+  top: 37%;
+}
+.sidenav-links li:nth-child(3):hover ~ .active {
+  top: 70%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -233,13 +235,34 @@ form {
   transform: scale(1.02);
 }
 
+.message {
+  width: 120px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #90f164;
+  color: rgb(9, 9, 9);
+  font-weight: 400;
+  letter-spacing: 1.1;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  transform: scale(1);
+}
+
+#successMessage{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: end;
+}
+
 /* Utilities */
 .form-button-add {
   margin: 10px 0px;
 }
-.btn-pole {
+#btn-pole {
+  text-decoration: none;
   width: 120px;
-  padding: 8px 15px;
+  padding: 10px 15px;
   border: none;
   border-radius: 20px;
   background-color: #df6767;
@@ -250,13 +273,14 @@ form {
   transition: all 0.3s;
   transform: scale(1);
 }
-.btn-pole:hover {
+#btn-pole:hover {
   background-color: #e25a5a;
   transform: scale(1.02);
 }
-.btn-arm {
+#btn-arm {
+  text-decoration: none;
   width: 120px;
-  padding: 8px 15px;
+  padding: 10px 15px;
   border: none;
   border-radius: 20px;
   background-color: #af7d7d;
@@ -267,7 +291,7 @@ form {
   transition: all 0.3s;
   transform: scale(1);
 }
-.btn-arm:hover {
+#btn-arm:hover {
   background-color: #b36d6d;
   transform: scale(1.02);
 }
